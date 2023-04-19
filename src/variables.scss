@@ -1,0 +1,116 @@
+/* color */
+
+$clr-accent-400: hsl(12, 88%, 59%);
+$clr-accent-100: hsl(13, 100%, 96%);
+
+$clr-primary-400: hsl(228, 39%, 23%);
+
+$clr-neutral-100: hsl(232, 12%, 13%);
+$clr-neutral-900: hsl(0 0% 0%);
+
+/* font family */
+$ff-primary: "Be Vietnam Pro", sans-serif;
+
+$ff-body: $ff-primary;
+$ff-heading: $ff-primary;
+
+$fw-regular: 400;
+$fw-semi-bold: 500;
+$fw-bold: 700;
+
+$fs-300: 0.8125rem;
+$fs-400: 0.875rem;
+$fs-500: 0.9375rem;
+$fs-600: 1rem;
+$fs-700: 1.875rem;
+$fs-800: 2.5rem;
+$fs-900: 3.5rem;
+
+$fs-body: $fs-400;
+$fs-primary-heading: $fs-800;
+$fs-secondary-heading: $fs-700;
+$fs-nav: $fs-500;
+$fs-button: $fs-300;
+
+@media (min-width: 50em) {
+  $fs-body: $fs-500;
+  $fs-primary-heading: $fs-900;
+  $fs-secondary-heading: $fs-800;
+
+  $fs-nav: $fs-300;
+}
+
+/* Utility classes */
+
+.text-primary-400 {
+  color: $clr-primary-400;
+}
+
+.text-accent-400 {
+  color: $clr-accent-400;
+}
+
+.text-accent-100 {
+  color: $clr-accent-100;
+}
+
+.text-neutral-100 {
+  color: $clr-neutral-100;
+}
+
+.text-neutral-900 {
+  color: $clr-neutral-900;
+}
+
+.bg-primary-400 {
+  background-color: $clr-primary-400;
+}
+
+.bg-accent-400 {
+  background-color: $clr-accent-400;
+}
+
+.bg-accent-100 {
+  background-color: $clr-accent-100;
+}
+
+.bg-neutral-100 {
+  background-color: $clr-neutral-100;
+}
+
+.bg-neutral-900 {
+  background-color: $clr-neutral-900;
+}
+
+.fw-regular {
+  font-weight: $fw-regular;
+}
+
+.fw-semi-bold {
+  font-weight: $fw-semi-bold;
+}
+
+.fw-bold {
+  font-weight: $fw-bold;
+}
+
+.fs-primary-heading {
+  font-size: $fs-primary-heading;
+}
+
+.fs-secondary-heading {
+  font-size: $fs-secondary-heading;
+}
+
+.fs-300 {
+  font-size: $fs-300;
+}
+.fs-400 {
+  font-size: $fs-400;
+}
+.fs-500 {
+  font-size: $fs-500;
+}
+.fs-600 {
+  font-size: $fs-600;
+}
