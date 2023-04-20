@@ -1,6 +1,8 @@
 /* color */
 
+$clr-accent-500: hsl(12, 60%, 45%);
 $clr-accent-400: hsl(12, 88%, 59%);
+$clr-accent-300: hsl(12, 88%, 75%);
 $clr-accent-100: hsl(13, 100%, 96%);
 
 $clr-primary-400: hsl(228, 39%, 23%);
@@ -51,6 +53,18 @@ $size-900: 5rem;
 }
 
 /* Utility classes */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
 
 .text-primary-400 {
   color: $clr-primary-400;
@@ -106,10 +120,12 @@ $size-900: 5rem;
 
 .fs-primary-heading {
   font-size: $fs-primary-heading;
+  line-height: 1.1;
 }
 
 .fs-secondary-heading {
   font-size: $fs-secondary-heading;
+  line-height: 1.1;
 }
 
 .fs-300 {
@@ -123,4 +139,12 @@ $size-900: 5rem;
 }
 .fs-600 {
   font-size: $fs-600;
+}
+
+.padding-block-900 {
+  padding-block: $size-900;
+}
+
+.padding-block-700 {
+  padding-block: $size-700;
 }

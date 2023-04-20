@@ -1,38 +1,74 @@
+import { useState } from "react";
 import "./App.scss";
 
 function App() {
+  const [opened, setOpen] = useState(false);
+
+  const handleNav = () => {
+    setOpen(!opened);
+  };
+
+
   return (
     <>
-      <header>
+      <header className="primary-header">
         <div className="container">
-          <a href="">
-            <img src="src/images/logo.svg" alt="Manage" />
-          </a>
-          <nav className="primary-navigation">
-            <ul role="list" className="nav-list">
-              <li>
-                <a href="#">Pricing</a>
-              </li>
-              <li>
-                <a href="#">Product</a>
-              </li>
-              <li>
-                <a href="#">About Us</a>
-              </li>
-              <li>
-                <a href="#">Careers</a>
-              </li>
-              <li>
-                <a href="#">Community</a>
-              </li>
-            </ul>
-          </nav>
-          <button className="button">Get Started</button>
+          <div className="nav-wrapper">
+            <a href="#">
+              <img src="src/images/logo.svg" alt="Manage" />
+            </a>
+            <button
+              onClick={handleNav}
+              className="mobile-nav-toggle"
+              aria-controls="primary-navigation"
+              aria-expanded={`${opened ? "true" : "false"}`}
+            >
+              <img
+                className="icon-hamburger"
+                src="src/images/icon-hamburger.svg"
+                alt="open harmburger"
+                aria-hidden="true"
+              />
+              <img
+                className="icon-close"
+                src="src/images/icon-close.svg"
+                alt="close hamburger"
+                aria-hidden="true"
+              />
+              <span className="visually-hidden">Menu</span>
+            </button>
+            <nav
+              style={{ display: `${opened ? "block" : "none"}` }}
+              className="primary-navigation"
+              id="primary-navigation"
+            >
+              <ul aria-label="Primary" role="list" className="nav-list">
+                <li>
+                  <a href="#">Pricing</a>
+                </li>
+                <li>
+                  <a href="#">Product</a>
+                </li>
+                <li>
+                  <a href="#">About Us</a>
+                </li>
+                <li>
+                  <a href="#">Careers</a>
+                </li>
+                <li>
+                  <a href="#">Community</a>
+                </li>
+              </ul>
+            </nav>
+            <button style={{ display: "none" }} className="button">
+              Get Started
+            </button>
+          </div>
         </div>
       </header>
 
       <main>
-        <section>
+        <section className="padding-block-900">
           <div className="container">
             <div className="even-columns">
               <div>
@@ -52,7 +88,7 @@ function App() {
           </div>
         </section>
 
-        <section>
+        <section className="padding-block-900">
           <div className="container">
             <div className="even-columns">
               <div>
@@ -105,14 +141,14 @@ function App() {
           </div>
         </section>
 
-        <section className="carousel">
-          <h2 className="fs-seconday-heading">What they've said</h2>
+        <section className="carousel | padding-block-700">
+          <h2 className="fs-secondary-heading fw-bold">What they've said</h2>
           {/* Carousel goes here */}
 
           <button className="button">Get Started</button>
         </section>
 
-        <section className="cta | bg-accent-400 text-neutral-100">
+        <section className="cta | padding-block-700 bg-accent-400 text-neutral-100">
           <div className="container">
             <div className="even-columns">
               <div>
@@ -130,7 +166,7 @@ function App() {
         </section>
       </main>
 
-      <footer className="bg-neutral-900 text-neutral-100">
+      <footer className="padding-block-700 bg-neutral-900 text-neutral-100">
         <div className="container">
           <div className="even-columns">
             <div>
