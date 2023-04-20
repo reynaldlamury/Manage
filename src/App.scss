@@ -11,23 +11,41 @@
  - Desktop --> 1440px
 
 */
-@mixin large {
-  @media (min-width: 60em) {
+@mixin desktop {
+  @media (min-width: 50em) {
     @content;
   }
 }
 
 /* ========================================== */
 
-/* main styles *
+/* general styling */
+
+.container {
+  $max-width: 1100px;
+  $padding: 1rem;
+
+  width: min($max-width, 100% - ($padding * 2));
+  margin-inline: auto;
+
+  .even-columns {
+    display: grid;
+    gap: 1rem;
+
+    @include desktop {
+      grid-auto-flow: column;
+    }
+  }
+}
 
 /* Set core body defaults */
 body {
   height: 100%;
-  font-family: $ff-primary;
+  font-size: $fs-body;
+  font-family: $ff-body;
+  color: $clr-primary-400;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  font-size: 1rem;
 
   /* border */
   border: 3px solid hotpink;

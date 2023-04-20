@@ -112,7 +112,7 @@ function App() {
           <button className="button">Get Started</button>
         </section>
 
-        <section className="cta | bg-primary-400 text-neutral-100">
+        <section className="cta | bg-accent-400 text-neutral-100">
           <div className="container">
             <div className="even-columns">
               <div>
@@ -184,7 +184,7 @@ function App() {
               <form action="">
                 <input type="email" />
                 <button className="button">Go</button>
-								<p>Copyright 2020. All Rights Reserved</p>
+                <p>Copyright 2020. All Rights Reserved</p>
               </form>
             </div>
           </div>
