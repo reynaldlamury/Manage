@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./App.scss";
 
 function App() {
@@ -8,10 +8,9 @@ function App() {
     setOpen(!opened);
   };
 
-
   return (
     <>
-      <header className="primary-header">
+      <header className={`primary-header ${opened ? "data-overlay" : ""}`}>
         <div className="container">
           <div className="nav-wrapper">
             <a href="#">
@@ -38,8 +37,8 @@ function App() {
               <span className="visually-hidden">Menu</span>
             </button>
             <nav
-              style={{ display: `${opened ? "block" : "none"}` }}
-              className="primary-navigation"
+              // style={{ display: `${opened ? "block" : "none"}` }}
+              className={`primary-navigation ${opened ? "nav-opened" : ""}`}
               id="primary-navigation"
             >
               <ul aria-label="Primary" role="list" className="nav-list">
@@ -60,7 +59,7 @@ function App() {
                 </li>
               </ul>
             </nav>
-            <button style={{ display: "none" }} className="button">
+            <button className="button | display-md-inline-flex display-sm-none">
               Get Started
             </button>
           </div>
@@ -71,6 +70,8 @@ function App() {
         <section className="padding-block-900">
           <div className="container">
             <div className="even-columns">
+							<div className="flow">
+
               <div>
                 <h1 className="fs-primary-heading fw-bold">
                   Bring everyone together to build better products.
@@ -84,6 +85,7 @@ function App() {
               <div>
                 <img src="src/images/illustration-intro.svg" alt="" />
               </div>
+							</div>
             </div>
           </div>
         </section>

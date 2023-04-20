@@ -1,3 +1,16 @@
+/* media query */
+
+/* width 
+ - mobile --> 375px
+ - Desktop --> 1440px
+
+*/
+@mixin desktop {
+  @media (min-width: 53em) {
+    @content;
+  }
+}
+
 /* color */
 
 $clr-accent-500: hsl(12, 60%, 45%);
@@ -147,4 +160,22 @@ $size-900: 5rem;
 
 .padding-block-700 {
   padding-block: $size-700;
+}
+
+.button {
+  // display-sm-none display-md-inline-flex">
+  &.display-sm-none {
+    display: none;
+  }
+
+  &.display-md-inline-flex {
+    @include desktop {
+      display: inline-flex;
+    }
+  }
+}
+
+:where(.flow :not(:first-child)) {
+	margin-top: 3rem;
+
 }

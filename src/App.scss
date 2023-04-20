@@ -18,7 +18,7 @@
 }
 
 @mixin mobile {
-  @media (min-width: 50em) {
+  @media (max-width: 53em) {
     @content;
   }
 }
@@ -27,8 +27,32 @@
 
 /* general styling */
 
+/* opened-nav [toggle class] ---------------> */
+.data-overlay::before {
+  @include mobile {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(rgb(0 0 0 / 0), rgb(0 0 0 / 0.8));
+  }
+}
+
+.primary-header {
+  .nav-wrapper {
+    .primary-navigation {
+      &.nav-opened {
+        @include mobile {
+          display: block;
+        }
+      }
+    }
+  }
+}
+/*---- ------- ----------- -------- -- -----> */
+
 /* button */
 .button {
+  display: inline-flex;
   cursor: pointer;
   text-decoration: none;
   border-radius: 100vmax;
@@ -74,7 +98,9 @@
   }
 }
 
-header {
+.primary-header {
+  margin-top: $size-700;
+
   .nav-wrapper {
     display: flex;
     justify-content: space-between;
@@ -82,10 +108,14 @@ header {
 
     /* navigation */
     .mobile-nav-toggle {
+      z-index: 2;
       display: none;
 
       @include mobile {
         display: block;
+        position: fixed;
+        top: 3rem;
+        right: $size-400;
         cursor: pointer;
         background: transparent;
         border: 0;
@@ -99,26 +129,26 @@ header {
       }
     }
 
-    .primary-header {
-      margin-top: $size-700;
-    }
-
     .primary-navigation {
       .nav-list {
+        display: flex;
+        gap: clamp($size-400, 5vw, $size-700);
         font-size: $fs-nav;
+        font-weight: $fw-semi-bold;
 
         a {
           &:hover,
           &:focus {
-            @include mobile {
-              text-decoration: none;
-              color: $clr-accent-400;
-            }
-          }
-          @include mobile {
+            // @include mobile {
             text-decoration: none;
-            color: $clr-primary-400;
+            color: $clr-accent-400;
+            // }
           }
+
+          // @include mobile {
+          text-decoration: none;
+          color: $clr-primary-400;
+          // }
         }
 
         @include mobile {
@@ -129,18 +159,14 @@ header {
         }
       }
 
-      &::after {
-				content: '';
-				position: absolute;
-				inset: 0;
-				background: linear-gradient(red, blue); 
-      }
-
       @include mobile {
         display: none;
-        position: absolute;
+
+        position: fixed;
         padding: $size-700;
         inset: 7rem $size-400 auto;
+        max-width: 25rem;
+        margin-left: auto;
         background-color: $clr-neutral-100;
         border-radius: $size-100;
         box-shadow: 0 0 0.75em rgb(0, 0, 0, 0.05);
