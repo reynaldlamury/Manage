@@ -27,7 +27,8 @@
 
 /* general styling */
 
-/* Set core body defaults */
+/* tag selector -------------> --------------> */
+/* Set core body defaults --> body */
 body {
   height: 100%;
   font-size: $fs-body;
@@ -37,8 +38,19 @@ body {
   line-height: 1.5;
 
   /* border */
-  border: 3px solid hotpink;
+  // border: 3px solid hotpink;
 }
+
+p:not([class]) {
+  opacity: 0.7;
+  max-width: 32ch;
+
+  &[dataWidth="wide"] {
+    max-width: 42ch;
+  }
+}
+/* -------------> -----------> */
+/* -------------> -----------> */
 
 /* opened-nav [toggle class] ---------------> */
 .data-overlay::before {
@@ -97,6 +109,7 @@ body {
 .container {
   $max-width: 1100px;
   $padding: 1rem;
+  border: 2px solid slateblue;
 
   width: min($max-width, 100% - ($padding * 2));
   margin-inline: auto;
@@ -187,4 +200,3 @@ body {
     }
   }
 }
-

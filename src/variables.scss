@@ -175,11 +175,27 @@ $size-900: 5rem;
   }
 }
 
-:where(.flow :not(:first-child)) {
-  outline: 1px solid lime;
-  margin-top: 3em;
+main {
+  :where(.flow :not(:first-child)) {
+    outline: 1px solid lime;
+    margin-top: 3em;
+  }
 }
 
-.flow-1em {
-  margin-top: 1em;
+footer,
+.numbered-items {
+  .flow-1em > li {
+    background-color: cornflowerblue;
+    margin-top: 1em;
+  }
+
+  &.flow {
+    .flow-1em {
+      margin-top: 1em;
+    }
+
+    p {
+      margin-top: 1em;
+    }
+  }
 }

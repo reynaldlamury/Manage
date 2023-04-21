@@ -70,7 +70,6 @@ function App() {
         <section className="padding-block-900">
           <div className="container">
             <div className="even-columns">
-              {/* <div className="flow"> */}
               <div className="flow">
                 <h1 className="fs-primary-heading fw-bold">
                   Bring everyone together to build better products.
@@ -85,7 +84,6 @@ function App() {
                 <img src="src/images/illustration-intro.svg" alt="" />
               </div>
             </div>
-            {/* </div> */}
           </div>
         </section>
 
@@ -103,34 +101,34 @@ function App() {
                 </p>
               </div>
               <div>
-                <ul className="numbered-items" role="list">
-                  <li className="flow-1em">
+                <ul className="numbered-items | flow" role="list">
+                  <li>
                     <h3 className="fs-600 fw-bold">
                       Track company-wide progress
                     </h3>
-                    <p>
+                    <p datawidth="wide">
                       See how your day-to-day tasks fit into the wider vision.
                       Go from tracking progress at the milestone level all the
                       way done to the smallest of details. Never lose sight at
                       the bigger picture again.
                     </p>
                   </li>
-                  <li className="flow-1em">
-                    <h3 className="fs-600 fw-bold">
+                  <li>
+                    <h3 className="fs-600 fw-bold flow-1em">
                       Advanced built-in reports
                     </h3>
-                    <p>
+                    <p dataWidth='wide' >
                       Set internal delivery estimates and track progress toward
                       company goals. Our customisable dashboard helps you build
                       out the reports you need to keep key stakeholders
                       informed.
                     </p>
                   </li>
-                  <li className="flow-1em">
-                    <h3 className="fs-600 fw-bold">
+                  <li>
+                    <h3 className="fs-600 fw-bold flow-1em">
                       Everything you need in one place
                     </h3>
-                    <p>
+                    <p datawidth='wide' >
                       Stop jumping from one service to another to communicate,
                       store files, track tasks and share documents. Manage
                       offers an all-in-one team productivity solution
@@ -192,7 +190,7 @@ function App() {
             </div>
             <div>
               <nav className="footer-nav">
-                <ul aria-label="footer" role="list">
+                <ul className="flow-1em" aria-label="footer" role="list">
                   <li>
                     <a href="#">Home</a>
                   </li>
