@@ -31,9 +31,9 @@
 /* Set core body defaults --> body */
 body {
   height: 100%;
-  font-size: $fs-body;
-  font-family: $ff-body;
-  color: $clr-primary-400;
+  font-size: var(--fs-body);
+  font-family: var(--ff-body);
+  color: var(--clr-primary-400);
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 
@@ -41,9 +41,12 @@ body {
   // border: 3px solid hotpink;
 }
 
-p:not([class]) {
-  opacity: 0.7;
+p {
   max-width: 32ch;
+
+  &:not([class]) {
+    opacity: 0.7;
+  }
 
   &[dataWidth="wide"] {
     max-width: 42ch;
@@ -83,26 +86,25 @@ p:not([class]) {
   border-radius: 100vmax;
   border: 0;
   padding: 1.25em 2.5em;
-  font-weight: $fw-bold;
-  font-size: $fs-button;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-button);
   line-height: 1;
-  color: $clr-neutral-100;
-  background-color: $clr-accent-400;
-  box-shadow: 0 1.125em 1em -1em $clr-accent-500;
-
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-accent-400);
+  box-shadow: 0 1.125em 1em -1em var(--clr-accent-500);
   &[datatype="inverted"] {
-    background-color: $clr-neutral-100;
-    color: $clr-accent-400;
+    background-color: var(--clr-neutral-100);
+    color: var(--clr-accent-400);
 
     &:hover {
-      background-color: $clr-neutral-100;
-      color: $clr-accent-300;
+      background-color: var(--clr-neutral-100);
+      color: var(--clr-accent-300);
     }
   }
 
   &:hover,
   &:focus-visible {
-    background-color: $clr-accent-300;
+    background-color: var(--clr-accent-300);
   }
 }
 
@@ -125,7 +127,7 @@ p:not([class]) {
 }
 
 .primary-header {
-  margin-top: $size-700;
+  margin-top: var(--size-700);
 
   .nav-wrapper {
     display: flex;
@@ -141,7 +143,7 @@ p:not([class]) {
         display: block;
         position: fixed;
         top: 2.6rem;
-        right: $size-400;
+        right: var(--size-400);
         cursor: pointer;
         background: transparent;
         border: 0;
@@ -158,30 +160,30 @@ p:not([class]) {
     .primary-navigation {
       .nav-list {
         display: flex;
-        gap: clamp($size-400, 5vw, $size-700);
-        font-size: $fs-nav;
-        font-weight: $fw-semi-bold;
+        gap: clamp(var(--size-400), 5vw, var(--size-700));
+        font-size: var(--fs-nav);
+        font-weight: var(--fw-semi-bold);
 
         a {
           &:hover,
           &:focus {
             // @include mobile {
             text-decoration: none;
-            color: $clr-accent-400;
+            color: var(--clr-accent-400);
             // }
           }
 
           // @include mobile {
           text-decoration: none;
-          color: $clr-primary-400;
+          color: var(--clr-primary-400);
           // }
         }
 
         @include mobile {
           display: grid;
-          gap: $size-600;
+          gap: var(--size-600);
           text-align: center;
-          font-weight: $fw-bold;
+          font-weight: var(--fw-bold);
         }
       }
 
@@ -189,14 +191,33 @@ p:not([class]) {
         display: none;
 
         position: fixed;
-        padding: $size-700;
-        inset: 7rem $size-400 auto;
+        padding: var(--size-700);
+        inset: 7rem var(--size-400) auto;
         max-width: 25rem;
         margin-left: auto;
-        background-color: $clr-neutral-100;
-        border-radius: $size-100;
+        background-color: var(--clr-neutral-100);
+        border-radius: var(--size-100);
         box-shadow: 0 0 0.75em rgb(0, 0, 0, 0.05);
       }
     }
+  }
+}
+
+/* cta */
+.cta {
+  position: relative;
+  isolation: isolate;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    // background-color: red;
+    background-image: url(src/images/bg-tablet-pattern.svg),
+      url(src/images/bg-tablet-pattern.svg);
+    background-position: -15rem -5rem, 80rem -42rem;
+    background-repeat: no-repeat;
+    opacity: 0.1;
   }
 }

@@ -117,7 +117,7 @@ function App() {
                     <h3 className="fs-600 fw-bold flow-1em">
                       Advanced built-in reports
                     </h3>
-                    <p dataWidth='wide' >
+                    <p dataWidth="wide">
                       Set internal delivery estimates and track progress toward
                       company goals. Our customisable dashboard helps you build
                       out the reports you need to keep key stakeholders
@@ -128,7 +128,7 @@ function App() {
                     <h3 className="fs-600 fw-bold flow-1em">
                       Everything you need in one place
                     </h3>
-                    <p datawidth='wide' >
+                    <p datawidth="wide">
                       Stop jumping from one service to another to communicate,
                       store files, track tasks and share documents. Manage
                       offers an all-in-one team productivity solution
@@ -147,15 +147,15 @@ function App() {
           <button className="button">Get Started</button>
         </section>
 
-        <section className="cta | padding-block-700 bg-accent-400 text-neutral-100">
+        <section className="cta | padding-block-900 bg-accent-400 text-neutral-100">
           <div className="container">
-            <div className="even-columns">
+            <div className="even-columns vertical-align-center">
               <div>
-                <p className="fs-secondary-heading fw-bold">
-                  Simplify how your team works today
+                <p className="fs-secondary-heading fw-bold max-char-20">
+                  Simplify how your team works today.
                 </p>
               </div>
-              <div>
+              <div className="justify-self-end">
                 <button className="button" datatype="inverted">
                   Get Started
                 </button>
