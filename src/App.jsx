@@ -70,9 +70,8 @@ function App() {
         <section className="padding-block-900">
           <div className="container">
             <div className="even-columns">
-							<div className="flow">
-
-              <div>
+              {/* <div className="flow"> */}
+              <div className="flow">
                 <h1 className="fs-primary-heading fw-bold">
                   Bring everyone together to build better products.
                 </h1>
@@ -85,15 +84,15 @@ function App() {
               <div>
                 <img src="src/images/illustration-intro.svg" alt="" />
               </div>
-							</div>
             </div>
+            {/* </div> */}
           </div>
         </section>
 
         <section className="padding-block-900">
           <div className="container">
             <div className="even-columns">
-              <div>
+              <div className="flow">
                 <h2 className="fs-secondary-heading fw-bold">
                   What's different about Manage?
                 </h2>
@@ -105,7 +104,7 @@ function App() {
               </div>
               <div>
                 <ul className="numbered-items" role="list">
-                  <li>
+                  <li className="flow-1em">
                     <h3 className="fs-600 fw-bold">
                       Track company-wide progress
                     </h3>
@@ -116,7 +115,7 @@ function App() {
                       the bigger picture again.
                     </p>
                   </li>
-                  <li>
+                  <li className="flow-1em">
                     <h3 className="fs-600 fw-bold">
                       Advanced built-in reports
                     </h3>
@@ -127,7 +126,7 @@ function App() {
                       informed.
                     </p>
                   </li>
-                  <li>
+                  <li className="flow-1em">
                     <h3 className="fs-600 fw-bold">
                       Everything you need in one place
                     </h3>

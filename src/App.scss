@@ -27,6 +27,19 @@
 
 /* general styling */
 
+/* Set core body defaults */
+body {
+  height: 100%;
+  font-size: $fs-body;
+  font-family: $ff-body;
+  color: $clr-primary-400;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+
+  /* border */
+  border: 3px solid hotpink;
+}
+
 /* opened-nav [toggle class] ---------------> */
 .data-overlay::before {
   @include mobile {
@@ -114,7 +127,7 @@
       @include mobile {
         display: block;
         position: fixed;
-        top: 3rem;
+        top: 2.6rem;
         right: $size-400;
         cursor: pointer;
         background: transparent;
@@ -175,15 +188,3 @@
   }
 }
 
-/* Set core body defaults */
-body {
-  height: 100%;
-  font-size: $fs-body;
-  font-family: $ff-body;
-  color: $clr-primary-400;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-
-  /* border */
-  border: 3px solid hotpink;
-}

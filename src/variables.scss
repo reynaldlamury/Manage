@@ -176,6 +176,10 @@ $size-900: 5rem;
 }
 
 :where(.flow :not(:first-child)) {
-	margin-top: 3rem;
+  outline: 1px solid lime;
+  margin-top: 3em;
+}
 
+.flow-1em {
+  margin-top: 1em;
 }
