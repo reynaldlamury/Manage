@@ -228,6 +228,12 @@ input:where([type="text"], [type="email"]) {
 
 main {
   .section-2 {
+    .margin-top-custom {
+			p {
+
+      margin-top: 1.5em;
+			}
+    }
     /* numbered items */
     .numbered-items {
       counter-reset: count;
