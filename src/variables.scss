@@ -247,12 +247,16 @@ footer,
 
 .text-center-sm-only {
   p {
-  @include mobile {
-    margin-inline: auto;
-  }
+    @include mobile {
+      margin-inline: auto;
+    }
   }
 
   @include mobile {
     text-align: center;
   }
+}
+
+.margin-bottom-700 {
+	margin-block-end: var(--size-700);
 }
