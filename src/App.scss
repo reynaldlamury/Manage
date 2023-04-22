@@ -236,11 +236,12 @@ main {
         align-items: center;
         column-gap: var(--size-400);
 
-        h3 {
+        &__title {
           margin-top: 0;
+          background-color: orange;
         }
 
-        p {
+        &__body {
           grid-column: 1 / -1;
 
           @include medium {

@@ -106,10 +106,10 @@ function App() {
                 <ul className="numbered-items | flow" role="list">
                   <li>
                     <div className="counter">
-                      <h3 className="fs-600 fw-bold">
+                      <h3 className="counter__title | fs-600 fw-bold">
                         Track company-wide progress
                       </h3>
-                      <p datawidth="wide">
+                      <p className="counter__body" datawidth="wide">
                         See how your day-to-day tasks fit into the wider vision.
                         Go from tracking progress at the milestone level all the
                         way done to the smallest of details. Never lose sight at
@@ -119,27 +119,27 @@ function App() {
                   </li>
                   <li>
                     <div className="counter">
-                    <h3 className="fs-600 fw-bold flow-1em">
-                      Advanced built-in reports
-                    </h3>
-                    <p dataWidth="wide">
-                      Set internal delivery estimates and track progress toward
-                      company goals. Our customisable dashboard helps you build
-                      out the reports you need to keep key stakeholders
-                      informed.
-                    </p>
+                      <h3 className="counter__title | fs-600 fw-bold flow-1em">
+                        Advanced built-in reports
+                      </h3>
+                      <p className="counter__body" dataWidth="wide">
+                        Set internal delivery estimates and track progress
+                        toward company goals. Our customisable dashboard helps
+                        you build out the reports you need to keep key
+                        stakeholders informed.
+                      </p>
                     </div>
                   </li>
                   <li>
                     <div className="counter">
-                    <h3 className="fs-600 fw-bold flow-1em">
-                      Everything you need in one place
-                    </h3>
-                    <p datawidth="wide">
-                      Stop jumping from one service to another to communicate,
-                      store files, track tasks and share documents. Manage
-                      offers an all-in-one team productivity solution
-                    </p>
+                      <h3 className="counter__title | fs-600 fw-bold flow-1em">
+                        Everything you need in one place
+                      </h3>
+                      <p className="counter__body" datawidth="wide">
+                        Stop jumping from one service to another to communicate,
+                        store files, track tasks and share documents. Manage
+                        offers an all-in-one team productivity solution
+                      </p>
                     </div>
                   </li>
                 </ul>
