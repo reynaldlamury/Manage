@@ -52,6 +52,12 @@ p {
     max-width: 42ch;
   }
 }
+
+input:where([type="text"], [type="email"]) {
+  border-radius: 100vw;
+  border: 0;
+  padding: var(--size-300) var(--size-400);
+}
 /* -------------> -----------> */
 /* -------------> -----------> */
 
@@ -92,6 +98,7 @@ p {
   color: var(--clr-neutral-100);
   background-color: var(--clr-accent-400);
   box-shadow: 0 1.125em 1em -1em var(--clr-accent-500);
+
   &[datatype="inverted"] {
     background-color: var(--clr-neutral-100);
     color: var(--clr-accent-400);
@@ -100,6 +107,10 @@ p {
       background-color: var(--clr-neutral-100);
       color: var(--clr-accent-300);
     }
+  }
+
+  &[data-shadow="none"] {
+    box-shadow: none;
   }
 
   &:hover,
@@ -234,9 +245,84 @@ p {
   }
 }
 
-footer {
+/* footer */
+
+.primary-footer {
+  --logo-color: var(--clr-neutral-100);
+
+  &__wrapper {
+    display: grid;
+    gap: var(--size-700);
+    grid-template-areas:
+      "form"
+      "nav"
+      "logo-social";
+
+    & > * {
+      @include mobile {
+        margin-inline: auto;
+      }
+    }
+
+    @include desktop {
+      grid-template-areas: "logo-social nav form";
+    }
+  }
+
+  &__logo-social {
+    grid-area: logo-social;
+
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: var(--size-700);
+
+    @include desktop {
+      align-items: flex-start;
+      gap: var(--size-700);
+      justify-content: space-between;
+    }
+  }
+
+  &__nav {
+    grid-area: nav;
+  }
+
+  &__form {
+    grid-area: form;
+
+    form {
+      display: flex;
+      gap: var(--size-400);
+    }
+  }
+
+  .social-list {
+    display: flex;
+    gap: var(--size-600);
+
+    a:is(:hover, :focus) > .social-icon {
+      fill: var(--clr-accent-400);
+    }
+
+    .social-icon {
+      width: var(--size-600);
+      fill: var(--clr-neutral-100);
+      aspect-ratio: 1;
+
+      @include desktop {
+        width: var(--size-500);
+      }
+    }
+
+    @include desktop {
+      gap: var(--size-300);
+    }
+  }
+
   .footer-nav {
-		columns: 2;
+    columns: 2;
+    gap: max(10vw, 1.5rem);
 
     a {
       color: var(--clr-neutral-100);

@@ -14,7 +14,9 @@ function App() {
         <div className="container">
           <div className="nav-wrapper">
             <a href="#">
-              <img src="src/images/logo.svg" alt="Manage" />
+              <svg class="logo" width="146" height="24">
+                <use xlinkHref="src/images/logo.svg#logo"></use>
+              </svg>
             </a>
             <button
               onClick={handleNav}
@@ -165,30 +167,54 @@ function App() {
         </section>
       </main>
 
-      <footer className="padding-block-700 bg-neutral-900 text-neutral-100">
+      <footer className="primary-footer | padding-block-700 bg-neutral-900 text-neutral-100">
         <div className="container">
-          <div className="even-columns">
-            <div>
-              <img src="src/images/logo.svg" alt="Manage" />
-              <ul role="list" aria-label="Social links">
+          <div className="primary-footer__wrapper">
+            <div className="primary-footer__logo-social">
+              <a href="#" aria-label="home">
+                <svg class="logo" width="146" height="24">
+                  <use xlinkHref="src/images/logo.svg#logo"></use>
+                </svg>
+              </a>
+              <ul className="social-list" role="list" aria-label="Social links">
                 <li>
-                  <a aria-label="facebook" href="#"></a>
+                  <a aria-label="facebook" href="#">
+                    <svg class="social-icon">
+                      <use xlinkHref="src/images/social-icons.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
                 </li>
                 <li>
-                  <a aria-label="youtube" href="#"></a>
+                  <a aria-label="youtube" href="#">
+                    <svg class="social-icon">
+                      <use xlinkHref="src/images/social-icons.svg#icon-youtube"></use>
+                    </svg>
+                  </a>
                 </li>
                 <li>
-                  <a aria-label="twitter" href="#"></a>
+                  <a aria-label="twitter" href="#">
+                    <svg class="social-icon">
+                      <use xlinkHref="src/images/social-icons.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
                 </li>
                 <li>
-                  <a aria-label="pinterest" href="#"></a>
+                  <a aria-label="pinterest" href="#">
+                    <svg class="social-icon">
+                      <use xlinkHref="src/images/social-icons.svg#icon-pinterest"></use>
+                    </svg>
+                  </a>
                 </li>
                 <li>
-                  <a aria-label="instagram" href="#"></a>
+                  <a aria-label="instagram" href="#">
+                    <svg class="social-icon">
+                      <use xlinkHref="src/images/social-icons.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
                 </li>
               </ul>
             </div>
-            <div>
+            <div className="primary-footer__nav">
               <nav className="footer-nav">
                 <ul className="flow-1em" aria-label="footer" role="list">
                   <li>
@@ -215,12 +241,14 @@ function App() {
                 </ul>
               </nav>
             </div>
-            <div>
+            <div className="primary-footer__form">
               <form action="">
                 <input type="email" />
-                <button className="button">Go</button>
-                <p>Copyright 2020. All Rights Reserved</p>
+                <button className="button" data-shadow="none">
+                  Go
+                </button>
               </form>
+                <p>Copyright 2020. All Rights Reserved</p>
             </div>
           </div>
         </div>
