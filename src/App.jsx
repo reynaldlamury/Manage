@@ -151,11 +151,11 @@ function App() {
           <div className="container">
             <div className="even-columns vertical-align-center">
               <div>
-                <p className="fs-secondary-heading fw-bold max-char-20">
+                <p className="cta-heading  fw-bold max-char-20">
                   Simplify how your team works today.
                 </p>
               </div>
-              <div className="justify-self-end">
+              <div className="justify-self-end-md">
                 <button className="button" datatype="inverted">
                   Get Started
                 </button>

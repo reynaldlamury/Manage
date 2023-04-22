@@ -208,6 +208,15 @@ p {
   position: relative;
   isolation: isolate;
 
+	.cta-heading {
+		font-size: var(--fs-secondary-heading);
+
+		@include mobile {
+
+		font-size: var(--fs-primary-heading);
+		}
+	}
+
   &::before {
     content: "";
     position: absolute;
@@ -219,5 +228,9 @@ p {
     background-position: -15rem -5rem, 80rem -42rem;
     background-repeat: no-repeat;
     opacity: 0.1;
+  }
+
+  @include desktop {
+    text-align: left;
   }
 }

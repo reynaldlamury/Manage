@@ -11,6 +11,12 @@
   }
 }
 
+@mixin mobile {
+  @media (max-width: 53em) {
+    @content;
+  }
+}
+
 /* color */
 :root {
   --clr-accent-500: hsl(12, 60%, 45%);
@@ -203,14 +209,31 @@ footer,
   }
 }
 
-.justify-self-end {
+// .justify-self-end {
+//   justify-self: end;
+// }
+
+.justify-self-end-md {
   justify-self: end;
+
+  @include mobile {
+    justify-self: center;
+  }
 }
 
 .vertical-align-center {
   align-items: center;
+
+  @include mobile {
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 .max-char-20 {
   max-width: 20ch;
+
+  @include mobile {
+    max-width: 32ch;
+  }
 }
