@@ -89,7 +89,7 @@ function App() {
           </div>
         </section>
 
-        <section className="padding-block-900">
+        <section className="section-2 | padding-block-900">
           <div className="container">
             <div className="even-columns">
               <div className="flow">
@@ -105,17 +105,20 @@ function App() {
               <div>
                 <ul className="numbered-items | flow" role="list">
                   <li>
-                    <h3 className="fs-600 fw-bold">
-                      Track company-wide progress
-                    </h3>
-                    <p datawidth="wide">
-                      See how your day-to-day tasks fit into the wider vision.
-                      Go from tracking progress at the milestone level all the
-                      way done to the smallest of details. Never lose sight at
-                      the bigger picture again.
-                    </p>
+                    <div className="counter">
+                      <h3 className="fs-600 fw-bold">
+                        Track company-wide progress
+                      </h3>
+                      <p datawidth="wide">
+                        See how your day-to-day tasks fit into the wider vision.
+                        Go from tracking progress at the milestone level all the
+                        way done to the smallest of details. Never lose sight at
+                        the bigger picture again.
+                      </p>
+                    </div>
                   </li>
                   <li>
+                    <div className="counter">
                     <h3 className="fs-600 fw-bold flow-1em">
                       Advanced built-in reports
                     </h3>
@@ -125,8 +128,10 @@ function App() {
                       out the reports you need to keep key stakeholders
                       informed.
                     </p>
+                    </div>
                   </li>
                   <li>
+                    <div className="counter">
                     <h3 className="fs-600 fw-bold flow-1em">
                       Everything you need in one place
                     </h3>
@@ -135,6 +140,7 @@ function App() {
                       store files, track tasks and share documents. Manage
                       offers an all-in-one team productivity solution
                     </p>
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -248,7 +254,7 @@ function App() {
                   Go
                 </button>
               </form>
-                <p>Copyright 2020. All Rights Reserved</p>
+              <p>Copyright 2020. All Rights Reserved</p>
             </div>
           </div>
         </div>
