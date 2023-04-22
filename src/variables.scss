@@ -236,3 +236,23 @@ footer,
     max-width: 32ch;
   }
 }
+
+.text-center {
+  text-align: center;
+
+  p {
+    margin-inline: auto;
+  }
+}
+
+.text-center-sm-only {
+  p {
+  @include mobile {
+    margin-inline: auto;
+  }
+  }
+
+  @include mobile {
+    text-align: center;
+  }
+}

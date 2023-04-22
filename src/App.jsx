@@ -92,7 +92,7 @@ function App() {
         <section className="section-2 | padding-block-900">
           <div className="container">
             <div className="even-columns">
-              <div className="flow">
+              <div className="flow text-center-sm-only">
                 <h2 className="fs-secondary-heading fw-bold">
                   What's different about Manage?
                 </h2>
