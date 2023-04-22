@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import "./App.scss";
+import Carousel from "./components/Carousel";
 
 function App() {
   const [opened, setOpen] = useState(false);
@@ -150,6 +151,8 @@ function App() {
 
         <section className="carousel | padding-block-700">
           <h2 className="fs-secondary-heading fw-bold">What they've said</h2>
+          <Carousel />
+
           {/* Carousel goes here */}
 
           <button className="button">Get Started</button>
