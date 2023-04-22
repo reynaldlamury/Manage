@@ -165,7 +165,7 @@ function App() {
         </section>
       </main>
 
-      <footer className="padding-block-700 bg-neutral-900 text-neutral-100">
+      <footer className="footer | padding-block-700 bg-neutral-900 text-neutral-100">
         <div className="container">
           <div className="even-columns">
             <div>

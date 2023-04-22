@@ -193,8 +193,7 @@ main {
 
 footer,
 .numbered-items {
-  .flow-1em > li {
-    background-color: cornflowerblue;
+  .flow-1em > li:not(:first-child) {
     margin-top: 1em;
   }
 

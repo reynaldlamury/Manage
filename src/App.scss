@@ -208,14 +208,13 @@ p {
   position: relative;
   isolation: isolate;
 
-	.cta-heading {
-		font-size: var(--fs-secondary-heading);
+  .cta-heading {
+    font-size: var(--fs-secondary-heading);
 
-		@include mobile {
-
-		font-size: var(--fs-primary-heading);
-		}
-	}
+    @include mobile {
+      font-size: var(--fs-primary-heading);
+    }
+  }
 
   &::before {
     content: "";
@@ -232,5 +231,18 @@ p {
 
   @include desktop {
     text-align: left;
+  }
+}
+
+footer {
+  .footer-nav {
+    a {
+      color: var(--clr-neutral-100);
+      text-decoration: none;
+
+      &:is(:hover, :focus) {
+        color: var(--clr-accent-400);
+      }
+    }
   }
 }
