@@ -1,16 +1,18 @@
 import { useEffect, useRef, useState } from "react";
 import cards from "../../data";
+import { useStateValue } from "../StateProvider";
 
 const Carousel = () => {
+  const [{ indexDot, currentIndexDot }, dispatch] = useStateValue();
   const [page, setPage] = useState(0);
   const [pos, setPos] = useState(0);
-  // const [width, setWidth] = useState(0);
+  const [cardwidth, setCardwidth] = useState(494);
   const cardRefs = useRef([]);
 
   const handlePrev = () => {
     if (page > 0) {
       setPage((prevValue) => prevValue - 1);
-      setPos((prevValue) => prevValue - 494);
+      setPos((prevValue) => prevValue - cardwidth);
     }
   };
 
@@ -18,15 +20,22 @@ const Carousel = () => {
     const endLimit = Math.ceil(cards.length / 2);
     if (page < endLimit - 1) {
       setPage((prevValue) => prevValue + 1);
-      setPos((prevValue) => prevValue + 494);
+      setPos((prevValue) => prevValue + cardwidth);
     }
   };
 
   useEffect(() => {
     cardRefs.current.forEach((cardRef) => {
       cardRef.style.transform = `translateX(${-pos}px)`;
+
+      if (page < indexDot) {
+        cardRef.style.transform = `translateX(${-indexDot * cardwidth}px)`;
+      } else if (currentIndexDot > indexDot) {
+        cardRef.style.transform = `translateX(${indexDot * cardwidth}px)`;
+      }
     });
-  }, [pos]);
+  }, [pos, page, indexDot]);
+  // }, [pos]);
 
   return (
     <>
@@ -59,7 +68,17 @@ const Carousel = () => {
 };
 
 const Indicator = ({ page }) => {
+  const [state, dispatch] = useStateValue();
   const dots = Math.ceil(cards.length / 2);
+
+  const handleDot = (e) => {
+    const indexDot = Number(e.target.getAttribute("indexvalue"));
+
+    dispatch({
+      type: "GET_INDEXDOT",
+      value: indexDot,
+    });
+  };
 
   return (
     <>
@@ -69,7 +88,9 @@ const Indicator = ({ page }) => {
           .fill(dots)
           .map((_, idx) => (
             <div
+              indexvalue={idx}
               key={idx}
+              onClick={handleDot}
               className={`${idx === page ? "dot-active" : "dot"}`}
             ></div>
           ))}

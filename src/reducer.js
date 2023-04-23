@@ -1,13 +1,20 @@
 export const initialState = {
-  pos: 0,
+  indexDot: 0,
+  currentIndexDot: 0,
 };
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case "GET_POSITION":
+    case "GET_INDEXDOT":
       return {
         ...state,
-        pos: action.value,
+        indexDot: action.value,
+      };
+
+    case "GET_CURRENTINDEXDOT":
+      return {
+        ...state,
+        currentIndexDot: action.value,
       };
 
     default:
