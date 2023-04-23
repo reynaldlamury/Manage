@@ -27,6 +27,24 @@ const cards = [
     img: shanai,
     desc: "Their software allows us to track, manage and collaborate on our projects from anywhere. It keeps the whole team in sync without being instrusive.",
   },
+
+  {
+    name: "Shanai Gough",
+    img: shanai,
+    desc: "Their software allows us to track, manage and collaborate on our projects from anywhere. It keeps the whole team in sync without being instrusive.",
+  },
+
+  {
+    name: "Shanai Gough",
+    img: shanai,
+    desc: "Their software allows us to track, manage and collaborate on our projects from anywhere. It keeps the whole team in sync without being instrusive.",
+  },
+
+  {
+    name: "Shanai Gough",
+    img: shanai,
+    desc: "Their software allows us to track, manage and collaborate on our projects from anywhere. It keeps the whole team in sync without being instrusive.",
+  },
 ];
 
 export default cards;

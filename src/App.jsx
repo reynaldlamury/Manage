@@ -15,7 +15,7 @@ function App() {
         <div className="container">
           <div className="nav-wrapper">
             <a href="#">
-              <svg class="logo" width="146" height="24">
+              <svg className="logo" width="146" height="24">
                 <use xlinkHref="src/images/logo.svg#logo"></use>
               </svg>
             </a>
@@ -123,7 +123,7 @@ function App() {
                       <h3 className="counter__title | fs-600 fw-bold flow-1em">
                         Advanced built-in reports
                       </h3>
-                      <p className="counter__body" dataWidth="wide">
+                      <p className="counter__body" datawidth="wide">
                         Set internal delivery estimates and track progress
                         toward company goals. Our customisable dashboard helps
                         you build out the reports you need to keep key
@@ -181,42 +181,42 @@ function App() {
           <div className="primary-footer__wrapper">
             <div className="primary-footer__logo-social">
               <a href="#" aria-label="home">
-                <svg class="logo" width="146" height="24">
+                <svg className="logo" width="146" height="24">
                   <use xlinkHref="src/images/logo.svg#logo"></use>
                 </svg>
               </a>
               <ul className="social-list" role="list" aria-label="Social links">
                 <li>
                   <a aria-label="facebook" href="#">
-                    <svg class="social-icon">
+                    <svg className="social-icon">
                       <use xlinkHref="src/images/social-icons.svg#icon-facebook"></use>
                     </svg>
                   </a>
                 </li>
                 <li>
                   <a aria-label="youtube" href="#">
-                    <svg class="social-icon">
+                    <svg className="social-icon">
                       <use xlinkHref="src/images/social-icons.svg#icon-youtube"></use>
                     </svg>
                   </a>
                 </li>
                 <li>
                   <a aria-label="twitter" href="#">
-                    <svg class="social-icon">
+                    <svg className="social-icon">
                       <use xlinkHref="src/images/social-icons.svg#icon-twitter"></use>
                     </svg>
                   </a>
                 </li>
                 <li>
                   <a aria-label="pinterest" href="#">
-                    <svg class="social-icon">
+                    <svg className="social-icon">
                       <use xlinkHref="src/images/social-icons.svg#icon-pinterest"></use>
                     </svg>
                   </a>
                 </li>
                 <li>
                   <a aria-label="instagram" href="#">
-                    <svg class="social-icon">
+                    <svg className="social-icon">
                       <use xlinkHref="src/images/social-icons.svg#icon-instagram"></use>
                     </svg>
                   </a>
