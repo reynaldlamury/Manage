@@ -229,10 +229,9 @@ input:where([type="text"], [type="email"]) {
 main {
   .section-2 {
     .margin-top-custom {
-			p {
-
-      margin-top: 1.5em;
-			}
+      p {
+        margin-top: 1.5em;
+      }
     }
     /* numbered items */
     .numbered-items {
@@ -304,7 +303,50 @@ main {
   }
 }
 
+/* carousel */
+
+.carousel {
+  .wrapper {
+    outline: 3px solid green;
+
+    .card-container {
+      max-width: 900px;
+      outline: 3px solid red;
+      display: grid;
+      gap: var(--size-300);
+      // grid-template-columns: repeat(3, 25rem);
+      grid-auto-columns: minmax(25rem, 1fr);
+      grid-auto-flow: column;
+      margin-inline: auto;
+      // justify-content: start;
+      overflow-x: auto;
+      padding-block: 2em;
+
+      .card {
+        display: flex;
+				flex-direction: column;
+        align-items: center;
+        padding: 1em;
+        outline: 3px solid blue;
+        // justify-self: center;
+        // align-self: center;
+        // transform: translateX(-20rem);
+
+        &__img {
+          display: block;
+          margin-inline: auto;
+        }
+
+        &__name {
+          font-weight: var(--fw-bold);
+        }
+      }
+    }
+  }
+}
+
 /* cta */
+
 .cta {
   position: relative;
   isolation: isolate;
