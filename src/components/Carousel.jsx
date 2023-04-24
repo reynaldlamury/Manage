@@ -3,15 +3,17 @@ import cards from "../../data";
 import { useStateValue } from "../StateProvider";
 
 const Carousel = () => {
-  const [{ indexDot, currentIndexDot }, dispatch] = useStateValue();
+  const [{ indexDot, indicatorClicked }, dispatch] = useStateValue();
   const [page, setPage] = useState(0);
   const [pos, setPos] = useState(0);
-  const [cardwidth, setCardwidth] = useState(494);
+  // const [cardwidth, setCardwidth] = useState(494);
   const cardRefs = useRef([]);
+  const cardwidth = 494;
 
   const handlePrev = () => {
     if (page > 0) {
       setPage((prevValue) => prevValue - 1);
+
       setPos((prevValue) => prevValue - cardwidth);
     }
   };
@@ -25,17 +27,41 @@ const Carousel = () => {
   };
 
   useEffect(() => {
+    console.log("pos", pos);
+  }, [pos]);
+
+  // function moveCard (amount) {
+
+  // cardRefs.current.forEach((cardRef) => {
+  // cardRef.style.transform = `translateX(${-amount}px)`;
+  // });
+  // }
+
+  useEffect(() => {
     cardRefs.current.forEach((cardRef) => {
       cardRef.style.transform = `translateX(${-pos}px)`;
-
-      if (page < indexDot) {
-        cardRef.style.transform = `translateX(${-indexDot * cardwidth}px)`;
-      } else if (currentIndexDot > indexDot) {
-        cardRef.style.transform = `translateX(${indexDot * cardwidth}px)`;
-      }
     });
-  }, [pos, page, indexDot]);
-  // }, [pos]);
+    console.log("pos useEffect is being used...");
+  }, [pos]);
+
+  useEffect(() => {
+    // cardRefs.current.forEach((cardRef) => {
+    if (page < indexDot) {
+      setPage(indexDot);
+      setPos(indexDot * cardwidth);
+      // cardRef.style.transform = `translateX(${-indexDot * cardwidth}px)`;
+      console.log("block 1---> indexDot", indexDot);
+      console.log("pos", pos);
+    } else if (page > indexDot) {
+      setPage(indexDot);
+      setPos(indexDot * cardwidth);
+      // cardRef.style.transform = `translateX(${indexDot * cardwidth}px)`;
+      console.log("block 2 ---> indexDot", indexDot);
+    }
+    // });
+
+    console.log("indexBot useEffect is being used...");
+  }, [indexDot, indicatorClicked]);
 
   return (
     <>
@@ -70,9 +96,17 @@ const Carousel = () => {
 const Indicator = ({ page }) => {
   const [state, dispatch] = useStateValue();
   const dots = Math.ceil(cards.length / 2);
+  const [indicatorClicked, setIndicatorClicked] = useState(false);
 
   const handleDot = (e) => {
     const indexDot = Number(e.target.getAttribute("indexvalue"));
+    console.log(e.target);
+    setIndicatorClicked(!indicatorClicked);
+
+    dispatch({
+      type: "GET_INDICATORCLICKED",
+      value: indicatorClicked,
+    });
 
     dispatch({
       type: "GET_INDEXDOT",

@@ -1,6 +1,7 @@
 export const initialState = {
   indexDot: 0,
-  currentIndexDot: 0,
+  currentPage: 0,
+  indicatorClicked: false,
 };
 
 const reducer = (state, action) => {
@@ -11,10 +12,16 @@ const reducer = (state, action) => {
         indexDot: action.value,
       };
 
-    case "GET_CURRENTINDEXDOT":
+    case "GET_CURRENTPAGE":
       return {
         ...state,
-        currentIndexDot: action.value,
+        currentPage: action.value,
+      };
+
+    case "GET_INDICATORCLICKED":
+      return {
+        ...state,
+        indicatorClicked: action.value,
       };
 
     default:
